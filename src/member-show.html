@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="./src/vendors/bootstrap-4.4.1-dist/css/bootstrap.css">
+		
+		<!-- FontAwesome :) -->
+		<script src="./src/vendors/fontawesome-free-5.12.0-web/js/all.js"></script>
+
+		<title>Member Details</title>
+	</head>
+	<body>
+		
+		<!-- Top Navigation Bar -->
+		<nav class="navbar navbar-expand navbar-dark bg-primary">
+			<a class="navbar-brand" href="#"><span><i class="fa fa-user-astronaut"></i></span> PB Dutify</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Member</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAssignment" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Assignment
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownAssignment">
+							<a class="dropdown-item" href="#">Monthly</a>
+							<a class="dropdown-item" href="#">Weekly</a>
+							<a class="dropdown-item" href="#">Daily</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownReport" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Report
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownReport">
+							<a class="dropdown-item" href="#">Monthly</a>
+							<a class="dropdown-item" href="#">Weekly</a>
+							<a class="dropdown-item" href="#">Daily</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="navbar-nav">
+					<div class="nav-item">
+						<a class="nav-link" href="#">Sign in <span><i class="fa fa-user-circle"></i></span></a>
+					</div>
+				</ul>
+			</div>
+		</nav>
+
+		<section id="section--member--view" class="mt-5 container-fluid">
+			<div class="row">
+				<div class="col-12 mb-4">
+          <div class="d-flex align-items-center">
+            <!-- <span class="mr-3"><i class="display-4 fa fa-dice-d6"></i></span> -->
+            <span class="mr-3"><i class="display-4 fa fa-hat-wizard"></i></span>
+            <div class="d-flex flex-column mr-auto">
+              <div class="d-flex align-items-baseline">
+                <h1 class="m-0 mr-1">SM/PB Jaslina</h1>
+                <small>Security Guard of UiTM Dungun</small>
+              </div>
+              <h4>ID: 12345678</h4>
+              <!-- Add an absolute hoverable button, use pencil icon -->
+            </div>
+            <button class="btn btn-sm btn-outline-primary">Edit info <span><i class="fa fa-wrench"></i></span></button>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="d-flex flex-row">
+            <h4 class="mr-auto">Weeklies</h4>
+            <div class="d-flex flex-row align-items-baseline mb-2">
+              <button class="btn btn-sm btn-outline-primary mr-2"><</button>
+              <h5 class="mb-1">29 <small>December 2019 - </small> 4 <small>January 2020</small></h5>
+              <button class="btn btn-sm btn-outline-primary ml-2">></button>
+            </div>
+          </div>
+          <div class="btn-group btn-group-toggle w-100 mb-3" role="button" aria-label="Collapsible components" data-toggle="buttons">
+            <button class="btn btn-sm btn-outline-primary active" type="button" data-toggle="collapse" data-target="#multiCollapse1" aria-expanded="true" aria-controls="multiCollapse1" aria-pressed="true">Schedule</button>
+            <button class="btn btn-sm btn-outline-primary" type="button" data-toggle="collapse" data-target="#multiCollapse2" aria-expanded="false" aria-controls="multiCollapse2">Overtime</button>
+            <button class="btn btn-sm btn-outline-primary" type="button" data-toggle="collapse" data-target="#multiCollapse3" aria-expanded="false" aria-controls="multiCollapse3">Off Scheduling</button>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12">
+              <div class="collapse show" id="multiCollapse1">
+                <div class="mb-4">
+                  <h4 class="bg-primary text-white p-3 m-0">Schedule</h4>
+                  <table class="table table-sm table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">S</th>
+                          <th scope="col">M</th>
+                          <th scope="col">T</th>
+                          <th scope="col">W</th>
+                          <th scope="col">T</th>
+                          <th scope="col">F</th>
+                          <th scope="col">S</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>Location</th>
+                          <td>Pos 1</td>
+                          <td>Pos 2</td>
+                          <td>Pos 4</td>
+                          <td>Pos 1</td>
+                          <td>Pos 1</td>
+                          <td>Pos 3</td>
+                          <td>Pos 5</td>
+                        </tr>
+                        <tr>
+                          <th>Duty</th>
+                          <td>TA</td>
+                          <td>TA</td>
+                          <td>TA</td>
+                          <td>TA</td>
+                          <td>TA</td>
+                          <td>TA</td>
+                          <td>TA</td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="collapse" id="multiCollapse2">
+                <div class="mb-4">
+                  <h4 class="bg-primary text-white p-3 m-0">Overtime</h4>
+                  <table class="table table-sm table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">S</th>
+                        <th scope="col">M</th>
+                        <th scope="col">T</th>
+                        <th scope="col">W</th>
+                        <th scope="col">T</th>
+                        <th scope="col">F</th>
+                        <th scope="col">S</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>Original</th>
+                        <td>B</td>
+                        <td class="table-secondary">-</td>
+                        <td>B</td>
+                        <td class="table-secondary">-</td>
+                        <td>B</td>
+                        <td class="table-secondary">-</td>
+                        <td>B</td>
+                      </tr>
+                      <tr>
+                        <th>Overtime</th>
+                        <td>A</td>
+                        <td class="table-secondary">-</td>
+                        <td>A</td>
+                        <td class="table-secondary">-</td>
+                        <td>A</td>
+                        <td class="table-secondary">-</td>
+                        <td>A</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="collapse" id="multiCollapse3">
+                <div class="mb-4">
+                  <h4 class="bg-primary text-white p-3 m-0">Off Times</h4>
+                  <table class="table table-sm table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Remarks</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="table-secondary">
+                        <th>S</th>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <th>M</th>
+                        <td>CS</td>
+                        <td>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptates perspiciatis 
+                          labore nisi obcaecati praesentium ex necessitatibus pariatur voluptas possimus?
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>T</th>
+                        <td>CG</td>
+                        <td>
+                          Lorem ipsum dolor sit amet.
+                        </td>
+                      </tr>
+                      <tr class="table-secondary">
+                        <th>W</th>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                      <tr class="table-secondary">
+                        <th>T</th>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <th>F</th>
+                        <td>CTR</td>
+                        <td>Lorem, ipsum dolor.</td>
+                      </tr>
+                      <tr class="table-secondary">
+                        <th>S</th>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="d-flex flex-row align-items-baseline mb-3">
+            <button class="btn btn-sm btn-outline-primary mr-2"><</button>
+            <h5 class="mb-1">January 2020</h5>
+            <button class="btn btn-sm btn-outline-primary ml-2">></button>
+          </div>
+          <table class="table table-sm table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">S</th>
+                <th scope="col">M</th>
+                <th scope="col">T</th>
+                <th scope="col">W</th>
+                <th scope="col">T</th>
+                <th scope="col">F</th>
+                <th scope="col">S</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-secondary">29</td>
+                <td class="table-secondary">30</td>
+                <td class="table-secondary">31</td>
+                <td class="table-dark">1</td>
+                <td class="table-dark">2</td>
+                <td class="table-dark">3</td>
+                <td class="table-dark">4</td>
+              </tr>
+              <tr>
+                <td class="group-a">C</td>
+                <td class="group-a">C</td>
+                <td class="group-a">B</td>
+                <td class="group-a">B</td>
+                <td class="group-a">A</td>
+                <td class="group-a">A</td>
+                <td class="group-a">OFF</td>
+              </tr>
+              <tr>
+                <td class="table-dark">5</td>
+                <td class="table-dark">6</td>
+                <td class="table-dark">7</td>
+                <td class="table-dark">8</td>
+                <td class="table-dark">9</td>
+                <td class="table-dark">10</td>
+                <td class="table-dark">11</td>
+              </tr>
+              <tr>
+                <td class="group-a">C</td>
+                <td class="group-a">C</td>
+                <td class="group-a">B</td>
+                <td class="group-a">B</td>
+                <td class="group-a">A</td>
+                <td class="group-a">A</td>
+                <td class="group-a">OFF</td>
+              </tr>
+              <tr>
+                <td class="table-dark">12</td>
+                <td class="table-dark">13</td>
+                <td class="table-dark">14</td>
+                <td class="table-dark">15</td>
+                <td class="table-dark">16</td>
+                <td class="table-dark">17</td>
+                <td class="table-dark">18</td>
+              </tr>
+              <tr>
+                <td class="group-a">C</td>
+                <td class="group-a">C</td>
+                <td class="group-a">B</td>
+                <td class="group-a">B</td>
+                <td class="group-a">A</td>
+                <td class="group-a">A</td>
+                <td class="group-a">OFF</td>
+              </tr>
+             <tr>
+                <td class="table-dark">19</td>
+                <td class="table-dark">20</td>
+                <td class="table-dark">21</td>
+                <td class="table-dark">22</td>
+                <td class="table-dark">23</td>
+                <td class="table-dark">24</td>
+                <td class="table-dark">25</td>
+              </tr>
+              <tr>
+                <td class="group-a">C</td>
+                <td class="group-a">C</td>
+                <td class="group-a">B</td>
+                <td class="group-a">B</td>
+                <td class="group-a">A</td>
+                <td class="group-a">A</td>
+                <td class="group-a">OFF</td>
+              </tr>
+              <tr>
+                <td class="table-dark">26</td>
+                <td class="table-dark">27</td>
+                <td class="table-dark">28</td>
+                <td class="table-dark">29</td>
+                <td class="table-dark">30</td>
+                <td class="table-dark">31</td>
+                <td class="table-secondary">1</td>
+              </tr>
+              <tr>
+                <td class="group-a">C</td>
+                <td class="group-a">C</td>
+                <td class="group-a">B</td>
+                <td class="group-a">B</td>
+                <td class="group-a">A</td>
+                <td class="group-a">A</td>
+                <td class="group-a">OFF</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-8">
+          
+        </div>
+			</div>
+		</section>
+
+		<!-- jQuery first, then Popper.js (included in bundle), then Bootstrap JS -->
+		<script src="./src/vendors/jquery-3.4.1/jquery-3.4.1.slim.js"></script>
+		<script src="./src/vendors/bootstrap-4.4.1-dist/js/bootstrap.bundle.js"></script>
+	</body>
+</html>

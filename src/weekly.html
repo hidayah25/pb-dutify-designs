@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="./src/vendors/bootstrap-4.4.1-dist/css/bootstrap.css">
+		
+		<!-- FontAwesome :) -->
+		<script src="./src/vendors/fontawesome-free-5.12.0-web/js/all.js"></script>
+
+		<title>Weekly</title>
+	</head>
+	<body>
+		<!-- Top Navigation Bar -->
+		<nav class="navbar navbar-expand navbar-dark bg-primary">
+			<a class="navbar-brand" href="#"><span><i class="fa fa-user-astronaut"></i></span> PB Dutify</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Member</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAssignment" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Assignment
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownAssignment">
+							<a class="dropdown-item" href="#">Monthly</a>
+							<a class="dropdown-item" href="#">Weekly</a>
+							<a class="dropdown-item" href="#">Daily</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownReport" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Report
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownReport">
+							<a class="dropdown-item" href="#">Monthly</a>
+							<a class="dropdown-item" href="#">Weekly</a>
+							<a class="dropdown-item" href="#">Daily</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="navbar-nav">
+					<div class="nav-item">
+						<a class="nav-link" href="#">Sign in <span><i class="fa fa-user-circle"></i></span></a>
+					</div>
+				</ul>
+			</div>
+		</nav>
+
+		<section id="section--dashboard--weekly" class="my-3">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 mb-2">	
+						<h4>Weekly scheduling</h4>
+						<div class="d-flex flex-row align-items-baseline">
+							<button class="btn btn-sm btn-outline-primary"><</button>
+							<h6 class="mx-3">19 Jan - 25 Jan</h6>
+							<button class="btn btn-sm btn-outline-primary">></button>
+						</div>
+					</div>
+
+					<div class="col-12">
+						<table class="table table-sm table-hover table-bordered" id="weekly--table">
+							<thead>
+								<tr class="bg-primary text-white">
+									<!-- Span until limit; 4 + daysInMonth -->
+									<td colspan="11" class="text-center">
+										<button class="btn btn-sm btn-block btn-primary">
+											<strong>28</strong> members are not initialized with monthlies. Click here to initialize.
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="col" colspan="2">Dates</th>
+									<th scope="col">A: 0700- 1500</th>
+									<th scope="col">B: 1500 - 2300</th>
+									<th scope="col">C: 2300 - 0700</th>
+									<th scope="col">OFF</th>
+									<th scope="col">CR</th>
+									<th scope="col">CS</th>
+									<th scope="col">CG</th>
+									<th scope="col">CTR</th>
+									<th scope="col">EL</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Fri</td>
+									<td>3/1</td>
+									<td class="weekly--group-a">
+										<a class="weekly--add-btn" href="#addModal" data-toggle="modal">
+											<span class="weekly--member-id">23158</span>
+											<span class="weekly--member-alias" hidden>1234 Member A</span>
+										</a>
+										<a class="weekly--add-btn" href="#addModal" data-toggle="modal">
+											<span class="weekly--member-id">23132</span>
+											<span class="weekly--member-alias" hidden>2234 Member B</span>
+										</a>
+										<a class="weekly--show-btn" href="#showModal" data-toggle="modal">
+											<strong class="weekly--member-id">12323</strong>
+											<span class="weekly--member-alias" hidden>3234 Member C</span>
+											<span class="weekly--member-remark-type" hidden>Overtime</span>
+											<span class="weekly--member-remark-description" hidden>Ter overtime, rse mcm nk gaji lebih pun de gok hm</span>
+										</a>
+										<a href="#">25512</a>
+										<a href="#">12332</a><br>
+										<a href="#">25512</a>
+										<a href="#">23132</a>
+										<a href="#">12323</a>
+										<a href="#">23158</a><br>
+									</td>
+									<td class="weekly--group-b">
+										<a href="#"><strong>12323</strong></a>
+										<a href="#">25512</a>
+										<a href="#">23158</a>
+										<a href="#">23132</a>
+										<a href="#">12332</a><br>
+										<a href="#">25512</a>
+										<a href="#">12323</a>
+										<a href="#">23132</a>
+										<a href="#">23158</a><br>
+									</td>
+									<td class="weekly--group-c">
+										<a href="#">23169</a>
+										<a href="#">12323</a>
+										<a href="#"><strong>12332</strong></a><br>										  
+										<a href="#">12323</a>
+										<a href="#">23169</a>
+										<a href="#">12332</a><br>										  
+										<a href="#">23169</a>
+									</td>
+									<td class="weekly--group-off">
+										<a class="weekly--show-btn" href="#showModal" data-toggle="modal">
+											<span class="weekly--member-id">23169</span>
+											<span class="weekly--member-alias" hidden>1414 Member Off 1</span>
+											<span class="weekly--member-remark-type" hidden>Off</span>
+											<span class="weekly--member-remark-description" hidden></span>
+										</a>
+										<a class="weekly--show-btn" href="#showModal" data-toggle="modal">
+											<span class="weekly--member-id">12332</span>
+											<span class="weekly--member-alias" hidden>1414 Member Off 1</span>
+											<span class="weekly--member-remark-type" hidden>Off</span>
+											<span class="weekly--member-remark-description" hidden></span>
+										</a><br>
+										<a href="#">23169</a>
+										<a href="#">12332</a><br>
+										<a href="#">23169</a>
+									</td>
+									<td class="weekly--group-cr"></td>
+									<td class="weekly--group-cs"></td>
+									<td class="weekly--group-cg"></td>
+									<td class="weekly--group-ctr"></td>
+									<td class="weekly--group-el"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- Add Modal -->
+					<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content" role="document">
+								<div class="modal-header">
+									Add Remarks
+								</div>
+								<div class="modal-body">
+									<h5 class="modal-title form-alias" id="addModalLabel">Alias N/A</h5>
+									<div class="list-group list-group-horizontal w-100 mb-3" id="weeklyEditList" role="tablist">
+										<a class="list-group-item list-group-item-action flex-fill active" data-toggle="list" href="#overtimeForm" role="tab">Overtime</a>
+										<a class="list-group-item list-group-item-action flex-fill" data-toggle="list" href="#leaveForm" role="tab">Leave</a>
+									</div>
+									<div class="tab-content">
+										<div class="tab-pane fade show active" id="overtimeForm" role="tabpanel">
+											<form action="" method="POST">
+												<div class="form-row">
+													<div class="form-group col-12">
+														<label for="overtimeShift">Shift</label>
+														<select id="overtimeShift" name="overtimeShift" class="form-control" required>
+															<option value="" selected disabled hidden>Choose a shift...</option>
+															<option value="A">A: 0700 - 1500</option>
+															<option value="B">B: 1500 - 2300</option>
+															<option value="C">C: 2300 - 0700</option>
+														</select>
+													</div>
+													<div class="form-group col-12">
+														<label for="overtimeLocation">Location</label>
+														<select id="overtimeLocation" name="overtimeLocation" class="form-control" required>
+															<option value="" selected disabled hidden>Choose Location...</option>
+															<option value="POS1">Pos 1 - Gate A</option>
+															<option value="POS2">Pos 2 - Gate B</option>
+															<option value="POS3">Pos 3 - Akademik</option>
+															<option value="POS4">Pos 4 - Hotel</option>
+															<option value="POS5">Pos 5 - PHN/DYG/KARAH</option>
+															<option value="POS6">Pos 6 - RD/TGL/GM</option>
+															<option value="POS7">Pos 7 - Office</option>
+														</select>
+														</div>
+												</div>
+												<!-- Validate this input in controllers -->
+												<input name="id" class="form-id" type="text" value="N/A" hidden>
+												<button type="submit" class="btn btn-block btn-primary">Save Assignment</button>
+											</form>
+										</div>
+										<div class="tab-pane fade" id="leaveForm" role="tabpanel">
+											<form action="" method="POST">
+												<div class="form-row">
+													<div class="form-group col-12">
+														<label for="leaveType">Type</label>
+														<select id="leaveType" name="leaveType" class="form-control" required>
+															<option value="" selected disabled hidden>Choose Leave...</option>
+															<option value="CR">Rest</option>
+															<option value="CS">Medical</option>
+															<option value="CG">Replacement</option>
+															<option value="CTR">Without record</option>
+															<option value="EL">Emergency Leave</option>
+														</select>
+													</div>
+													<div class="form-group col-12">
+														<label for="leaveDesc">Description</label>
+														<textarea id="leaveDesc" name="leaveDescription" class="form-control" rows="3" placeholder="Leave blank if no description..."></textarea>
+													</div>
+												</div>
+												<!-- Validate this input in controllers -->
+												<input class="form-id" name="id" type="text" value="N/A" hidden>
+												<button type="submit" class="btn btn-block btn-primary">Save Leave</button>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Show > Delete Modal -->
+					<div class="modal fade" id="showModal" tabindex="-1" role="dialog" aria-labelledby="showModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content" role="document">
+								<div class="modal-header">
+									View remarks
+								</div>
+								<div class="modal-body">
+									<h5 class="mb-4	  modal-title form-alias" id="showModalLabel">Alias N/A</h5>
+									<div>
+										<h6>Type</h6>
+										<p class="form-type">Medical Leave</p>
+										<h6>Description</h6>
+										<p class="form-description"><span class="text-muted">Nothing at all...</span></p>
+									</div>
+									<form action="" method="POST">
+										<input class="form-id" name="id" type="text" value="N/A" hidden>
+										<button class="float-right btn btn-outline-danger btn-default">Remove remark</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- jQuery first, then Popper.js (included in bundle), then Bootstrap JS -->
+		<script src="./src/vendors/jquery-3.4.1/jquery-3.4.1.slim.js"></script>
+		<script src="./src/vendors/bootstrap-4.4.1-dist/js/bootstrap.bundle.js"></script>
+		<script>
+			$('.weekly--add-btn, .weekly--show-btn').click('on', function(){
+				let id = $(this).children('.weekly--member-id').text().trim();
+				let alias = $(this).children('.weekly--member-alias').text().trim();
+				let remarkType = $(this).children('.weekly--member-remark-type').text().trim();
+				let remarkDescription = $(this).children('.weekly--member-remark-description').text().trim();
+				$('.form-id').attr('value', id);
+				$('.form-alias').text(alias);
+				$('.form-type').text(remarkType);
+				console.info(remarkDescription);
+				$('.form-description').html(
+					remarkDescription ? remarkDescription : '<span class="text-muted">Nothing at all...</span>'
+				);
+
+			});
+		</script>
+	</body>
+</html>

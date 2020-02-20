@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="./src/vendors/bootstrap-4.4.1-dist/css/bootstrap.css">
+		
+		<!-- FontAwesome :) -->
+		<script src="./src/vendors/fontawesome-free-5.12.0-web/js/all.js"></script>
+
+		<title>Monthlies</title>
+	</head>
+  <body>
+		<!-- Top Navigation Bar -->
+		<nav class="navbar navbar-expand navbar-dark bg-primary">
+			<a class="navbar-brand" href="#"><span><i class="fa fa-user-astronaut"></i></span> PB Dutify</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Member</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAssignment" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Assignment
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownAssignment">
+							<a class="dropdown-item" href="#">Monthly</a>
+							<a class="dropdown-item" href="#">Weekly</a>
+							<a class="dropdown-item" href="#">Daily</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownReport" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Report
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownReport">
+							<a class="dropdown-item" href="#">Monthly</a>
+							<a class="dropdown-item" href="#">Weekly</a>
+							<a class="dropdown-item" href="#">Daily</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="navbar-nav">
+					<div class="nav-item">
+						<a class="nav-link" href="#">Sign in <span><i class="fa fa-user-circle"></i></span></a>
+					</div>
+				</ul>
+			</div>
+		</nav>
+
+		<section id="section--monthly--index" class="mt-4">
+			<div class="container-fluid">
+				<div class="row">
+
+					<div class="col-12 mb-4">
+						<div class="row">
+
+							<div class="col-4">
+								<div class="bg-primary text-white rounded d-flex align-items-center justify-content-center h-100">
+									<h4>Monthly scheduling</h4>
+								</div>	
+							</div>
+							<div class="col-4">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title">Quarter in <button class="btn btn-sm btn-outline-primary"><span><i class="fa fa-chevron-left"></i></span></button> 2019 <button class="btn btn-sm btn-outline-primary"><span><i class="fa fa-chevron-right"></i></span></button></h5>
+										<div class="btn-group">
+											<a class="btn btn-sm btn-outline-primary active" href="#">Jan-Apr</a>
+											<a class="btn btn-sm btn-outline-primary" href="#">May-Aug</a>
+											<a class="btn btn-sm btn-outline-primary" href="#">Sep-Dec</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-4">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title">Month</h5>
+										<div class="btn-group">
+											<a class="btn btn-sm btn-outline-primary active" href="#">January</a>
+											<a class="btn btn-sm btn-outline-primary" href="#">February</a>
+											<a class="btn btn-sm btn-outline-primary" href="#">March</a>
+											<a class="btn btn-sm btn-outline-primary" href="#">April</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-12 mb-4">
+						<table class="table table-hover table-sm table-bordered" id="monthly--table">
+							<thead>
+								<tr class="bg-primary text-white">
+									<!-- Span until limit; 4 + daysInMonth -->
+									<td colspan="34" class="text-center">
+										<button class="btn btn-sm btn-block btn-primary">
+											<strong>28</strong> members are not initialized with monthlies. Click here to initialize.
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Rank/ID/Name</th>
+									<th scope="col">Duty</th>
+									<th scope="col"><span><i class="fa fa-wrench"></i></span></th>
+									<th scope="col">1</th>
+									<th scope="col">2</th>
+									<th scope="col">3</th>
+									<th scope="col">4</th>
+									<th scope="col">5</th>
+									<th scope="col">6</th>
+									<th scope="col">7</th>
+									<th scope="col">8</th>
+									<th scope="col">9</th>
+									<th scope="col">10</th>
+									<th scope="col">11</th>
+									<th scope="col">12</th>
+									<th scope="col">13</th>
+									<th scope="col">14</th>
+									<th scope="col">15</th>
+									<th scope="col">16</th>
+									<th scope="col">17</th>
+									<th scope="col">18</th>
+									<th scope="col">19</th>
+									<th scope="col">20</th>
+									<th scope="col">21</th>
+									<th scope="col">22</th>
+									<th scope="col">23</th>
+									<th scope="col">24</th>
+									<th scope="col">25</th>
+									<th scope="col">26</th>
+									<th scope="col">27</th>
+									<th scope="col">28</th>
+									<th scope="col">29</th>
+									<th scope="col">30</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td id="monthly--id" hidden>23176</td>
+									<td id="monthly--gender" hidden>Male</td>
+									<td id="monthly--shift-index-offset" hidden>0</td>
+									<td id="monthly--shift-repeat" hidden>2</td>
+									<td id="monthly--alias" class="w-10">Kpl/PB 23176 Mohd Tazarudin</td>
+									<td
+										id="monthly--duty"
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Tugas Am"
+									>
+										TA
+									</td>
+									<td>
+										<button
+											id="monthly--edit-btn-0"
+											type="button"
+											class="monthly--edit-btn btn btn-sm btn-block btn-outline-primary"
+											data-toggle="modal"
+											data-target="#editModal"
+										>
+											<span><i class="fa fa-angle-right"></i></span>
+										</button>
+									</td>
+									<!-- 
+										Insert the classes into only 7 shifts from the tabulated shifts	
+										* This is to map the data into the form inside the modal
+									-->
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										C
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										C
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										B
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										B
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+									<td
+										class="bg-dark"
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									></td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>C</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>C</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>B</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>B</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>A</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>A</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									class="bg-dark"></td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>C</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>C</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>B</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>B</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>A</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>A</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									class="bg-dark"></td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>C</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>C</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>B</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>B</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>A</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>A</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									class="bg-dark"></td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>C</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Off Day"
+									>C</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td id="monthly--id" hidden>23176</td>
+									<td id="monthly--gender" hidden>Female</td>
+									<td id="monthly--shift-index-offset" hidden>4</td>
+									<td id="monthly--shift-repeat" hidden>3</td>
+									<td id="monthly--alias" class="w-10">L/KPL/W/PB 23160 Nor Baizura</td>
+									<td
+										id="monthly--duty"
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Ketua Syif"
+									>
+										KS
+									</td>
+									<td>
+										<button
+											id="monthly--edit-btn-1"
+											type="button"
+											class="monthly--edit-btn btn btn-sm btn-block btn-outline-primary"
+											data-toggle="modal"
+											data-target="#editModal"
+										>
+											<span><i class="fa fa-angle-right"></i></span>
+										</button>
+									</td>
+									<!-- 
+										Insert the classes into only 7 shifts from the tabulated shifts	
+										* This is to map the data into the form inside the modal
+									-->
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+									<td
+										class="table-dark"
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									></td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										B
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										B
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										B
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+									<td
+										class="table-dark"
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									></td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										B
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										B
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										B
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+									<td
+										class="table-dark"
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									></td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										B
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										B
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										B
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+									<td
+										class="table-dark"
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									></td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										B
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										B
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										B
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+									<td
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Loc : Pos 1"
+									>
+										A
+									</td>
+								</tr>
+								<tr class="bg-dark text-white">
+									<th scope="row">1</th>
+									<td id="monthly--id" hidden>23176</td>
+									<td id="monthly--gender" hidden>Female</td>
+									<td id="monthly--shift-index-offset" hidden>4</td>
+									<td id="monthly--shift-repeat" hidden>3</td>
+									<td id="monthly--alias" class="w-10">L/KPL/W/PB 23160 Nor Baizura</td>
+									<td
+										id="monthly--duty"
+										data-toggle="tooltip"
+										data-placement="top"
+										title="Ketua Syif"
+									>
+										KS
+									</td>
+									<td>
+										<form action="" method="PUT">
+											<button type="button" class="btn btn-sm btn-block btn-outline-light">
+												<span><i class="fa fa-plus"></i></span>
+											</button>
+										</form>
+									</td>
+									<!-- Span dynamic based on total days in the month -->
+									<td colspan="30" class="text-center">
+										<span><i class="far fa-hand-point-left"></i></span> <span>Please initialize this member's monthly.</span> <span class="text-info">Click the plus sign.</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- Edit Modal -->
+					<!-- <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true"> -->
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="editModalLabel">Reassign Member</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<h5 id="editModalAlias" class="card-title">N/A</h5>
+									<div class="list-group list-group-horizontal w-100 mb-3" id="monthlyEditList" role="tablist">
+										<a class="list-group-item list-group-item-action flex-fill active" data-toggle="list" href="#shiftForm" role="tab">Shift rearrangement</a>
+										<a class="list-group-item list-group-item-action flex-fill" data-toggle="list" href="#dutyForm" role="tab">Duty</a>
+									</div>
+									<div class="tab-content">
+										<div class="tab-pane fade show active" id="shiftForm" role="tabpanel">
+											<div class="d-flex flex-row mb-3">
+												<table class="table table-sm table-hoverable table-bordered m-0">
+													<thead>
+														<tr>
+															<th scope="col">#</th>
+															<th scope="col">1</th>
+															<th scope="col">2</th>
+															<th scope="col">3</th>
+															<th scope="col">4</th>
+															<th scope="col">5</th>
+															<th scope="col">6</th>
+															<th scope="col">7</th>
+															<th scope="col">#</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<button type="button" id="monthly--btn-shift-left" class="monthly--btn-shift btn btn-block btn-sm btn-primary"><span><i class="fa fa-caret-left"></i></span></button>
+															</td>
+															<div>
+															<td class="monthly--edit--rearrange">N/A</td>
+															<td class="monthly--edit--rearrange">N/A</td>
+															<td class="monthly--edit--rearrange">N/A</td>
+															<td class="monthly--edit--rearrange">N/A</td>
+															<td class="monthly--edit--rearrange">N/A</td>
+															<td class="monthly--edit--rearrange">N/A</td>
+															<td class="monthly--edit--rearrange">N/A</td>
+															<td>
+																<button type="button" id="monthly--btn-shift-right" class="monthly--btn-shift btn btn-block btn-sm btn-primary"><span><i class="fa fa-caret-right"></i></span></button>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<form action="" method="POST">
+												<input name="id" class="monthly--edit-form-id" type="text" hidden aria-hidden="true">
+												<input name="offset" id="monthly--edit-rearrange-form-offset" type="text" hidden aria-hidden="true">
+												<button type="submit" class="btn btn-block btn-primary">Save changes</button>
+											</form>
+										</div>
+										<div class="tab-pane fade" id="dutyForm" role="tabpanel">
+											<form action="" method="POST">
+												<div class="form-row">
+													<div class="form-group col-12">
+														<label for="monthly--edit-duty-form-select">Duty</label>
+														<select name="duty" id="monthly--edit-duty-form-select" class="form-control">
+															<option selected disabled hidden>Choose Duty...</option>
+															<option value="KPB">Ketua PB</option>
+															<option value="KO">Ketua Operasi</option>
+															<option value="PA">Pejabat Am</option>
+															<option disabled>───────────────</option>
+															<option value="KS">Ketua Syif</option>
+															<option value="MCC">Main Control Center</option>
+															<option disabled>───────────────</option>
+															<option value="TA" >Tugas Am</option>
+															<option value="MPV">MPV</option>
+															<option disabled>───────────────</option>
+															<option value="KT">Ketua Trafik</option>
+															<option value="T">Trafik</option>
+															<option disabled>───────────────</option>
+															<option value="KSIA">Ketua Siasatan</option>
+															<option value="SIA">Siasatan</option>
+														</select>
+													</div>
+												</div>
+												<div class="d-flex">
+													<input name="id" class="monthly--edit-form-id" type="text" hidden aria-hidden="true">
+													<button type="submit" class="btn btn-block btn-primary mr-2">Change Duty</button>
+												</div>
+											</form>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- </div> -->
+				</div>
+			</div>
+		</section>
+
+		<!-- jQuery first, then Popper.js (included in bundle), then Bootstrap JS -->
+		<script src="./src/vendors/jquery-3.4.1/jquery-3.4.1.slim.js"></script>
+		<script src="./src/vendors/bootstrap-4.4.1-dist/js/bootstrap.bundle.js"></script>
+		<script>
+			// == Init Tooltips
+			$('[data-toggle="tooltip"]').tooltip();
+
+			/**
+				Make shift rearrangement interactable
+				* == Shifts: Detach from end and attach to other end based on
+					== which button clicked; left or right
+				* == Update the offset in the form
+			*/
+			$('.monthly--btn-shift').click(function() {
+				////////////////////////////////////
+				//        SHIFT THE SHIFTS
+				////////////////////////////////////
+				if (this.id == 'monthly--btn-shift-right') {
+					// Detach the last one and 'shift' it
+					$('.monthly--edit--rearrange')
+						.eq(6)
+						.detach()
+						.insertBefore(
+							$('.monthly--edit--rearrange').eq(0)
+						);
+				} else if (this.id == 'monthly--btn-shift-left') {
+					// Detach the first one and 'push' it
+					$('.monthly--edit--rearrange')
+						.eq(0)
+						.detach()
+						.insertAfter(
+							$('.monthly--edit--rearrange').eq(5)
+						);
+				}
+				/////////////////// end
+
+				////////////////////////////////////
+				//           DATA UPDATE
+				////////////////////////////////////
+				let offset = 0;
+				$(".monthly--edit--rearrange").each(function(i) {
+					if(this.id) {
+						offset = i;
+						return false;
+					}
+				});
+				/////////////////// end
+
+			});
+
+			/**
+				* Assign data from chosen row table into form inside the modal
+				* == Listen for monthly--edit-btn click
+				* == Find out which button is it from by extracting the index from the button's id
+				* == Find and select the specific <tr> in <tbody> using the extracted index
+				* == Extract information within the selected <tr>
+				
+				* == - #monthly--id (Hidden)
+				* == - #monthly--alias
+				* == - #monthly--duty
+
+				* == - #monthly--rotation-offset (Hidden)
+				* == --- > This attribute shifts (offsets) the shift to the right/left
+
+				* == - #monthly--rotation-repeat (Hidden)
+				* == --- > This attribute determines how many would one shift be repeated
+
+				* == - #monthly--rotation-rest (Hidden)
+				* == --- > This attribute determines how many rest would it render
+
+				* == - #monthly--rotation-arrangement (Hidden)
+				* == --- > This attribute determines the available shifts; CBA / BA / P / A
+
+				* Append found data into form
+			*/
+			$('.monthly--edit-btn').click(function() {
+				// Retreive the id, and extract the index number
+				let rowId = Number( this.id.replace('monthly--edit-btn-', '') );
+				// Extract attributes
+				let id = selectRow('#monthly--id', rowId);
+				let alias = selectRow('#monthly--alias', rowId);
+				let duty = selectRow('#monthly--duty', rowId);
+				let offset = Number( selectRow('#monthly--shift-index-offset', rowId).text() );
+				let shiftRepeat = Number( selectRow('#monthly--shift-repeat', rowId).text() );
+
+				////////////////////////////////////
+				// FORM / DISPLAY INITIAL ASSIGNMENT
+				////////////////////////////////////
+				// == Assign alias to modal header
+				$('#editModalAlias').text(alias.text());
+				// == ID set value both forms
+				$('.monthly--edit-form-id').attr('value', id.text());
+				// == REARRANGE SHIFT set value offset
+				$('#monthly--edit-rearrange-form-offset').attr('value', offset);
+				// == CHANGE DUTY set value
+				$('#monthly--edit-duty-form-select option').each(function(i) {
+					// Clear up selected attribute from all elements
+					$(this).removeAttr('selected');
+					// Found item as boolean
+					let found = $(this).val() == duty.text().trim();
+					if(found) {
+						// Set attribute selected
+						$(this).attr('selected', 'selected');
+					}
+				});
+				//////////// End
+
+				////////////////////////////////////
+				//  SHIFTS REARRANGE CONSTRUCTION
+				////////////////////////////////////
+				// == Create shifts queue
+				let shiftArr = [];
+				// == Iterate through these type of shiftArr constants
+				['C','B','A','OFF'].forEach(shift => {
+					// Push shift consecutively; e.g: C C, B B, A A (2 times)
+					for(let i=0; i<shiftRepeat; i++) {
+						// If shiftRepeat == 3, skip C
+						if(shiftRepeat == 3 & shift == 'C') return;
+						shiftArr.push(shift);
+						// Push the shift OFF once, then terminate iteration
+						if(shift == 'OFF') return;
+					}
+				});
+				// == Reorder shiftArr according to offset
+				for(let i=0; i<offset; i++) {
+					// Pop the end, unshift into the beginning
+					shiftArr.unshift(shiftArr.pop());
+				}
+				// == Push into table form
+				shiftArr.forEach((item, i) => {
+					selectShift(i).removeAttr('id');
+					if(i == offset) {
+						selectShift(i).attr('id', 'monthly--edit-rearrange-offset');
+					}
+					selectShift(i).text(item);
+				});
+				//////////// End
+
+			});
+			// Functions:
+			// 			== that selects an attribute in specific table row
+			function selectRow(target, rowId) { return $(target, $('#monthly--table tbody tr').eq(rowId)) }
+			// 			== that selects shift column in modal table form
+			function selectShift(colId) { return $('#shiftForm table tbody').find('.monthly--edit--rearrange').eq(colId) }
+		</script>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="./src/vendors/bootstrap-4.4.1-dist/css/bootstrap.css">
+		
+		<!-- FontAwesome :) -->
+		<script src="./src/vendors/fontawesome-free-5.12.0-web/js/all.js"></script>
+
+		<title>Member Listing</title>
+	</head>
+	<body>
+		
+		<!-- Top Navigation Bar -->
+		<nav class="navbar navbar-expand navbar-dark bg-primary">
+			<a class="navbar-brand" href="#"><span><i class="fa fa-user-astronaut"></i></span> PB Dutify</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Member</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAssignment" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Assignment
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownAssignment">
+							<a class="dropdown-item" href="#">Monthly</a>
+							<a class="dropdown-item" href="#">Weekly</a>
+							<a class="dropdown-item" href="#">Daily</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownReport" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Report
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownReport">
+							<a class="dropdown-item" href="#">Monthly</a>
+							<a class="dropdown-item" href="#">Weekly</a>
+							<a class="dropdown-item" href="#">Daily</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="navbar-nav">
+					<div class="nav-item">
+						<a class="nav-link" href="#">Sign in <span><i class="fa fa-user-circle"></i></span></a>
+					</div>
+				</ul>
+			</div>
+		</nav>
+
+		<section id="section--member--index" class="mt-5 container">
+			<div class="row">
+				<div class="col-12 mb-2">
+					<d class="d-flex align-items-baseline">
+						<h1 class="m-0 mr-1">Guard Members</h1>
+						<small>of Dungun's PB</small>
+					</d>
+				</div>
+				<div class="col-10 mb-3">
+					<div class="row">
+						<div class="col-6">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Total</h5>
+									<p class="card-text">38 Members</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex flex-row align-items-baseline mb-2">
+										<button class="btn btn-sm btn-outline-primary"><</button>
+										<h6 class="mx-3">19 Jan - 25 Jan</h6>
+										<button class="btn btn-sm btn-outline-primary">></button>
+									</div>
+									<p class="card-text">Assigned <strong>5 Members</strong></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 mb-3">
+					<button class="btn btn-block btn btn-outline-primary h-100">Add Member</button>
+				</div>
+				<div class="col-12">
+					<table class="table table-sm table-hover">
+						<thead>
+							<tr>
+								<th scope="col">No.</th>
+								<th>ID</th>
+								<th>Name</th>
+								<th>Rank</th>
+								<th>Weekly Assigned</th>
+								<th>#</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>123456</td>
+								<td>John Doe</td>
+								<td>Lance Corperal</td>
+								<td>7</td>
+								<td><a href="#" class="btn btn-block btn-sm btn-outline-dark">></a></td>
+							</tr>
+							<tr>
+								<th scope="row">1</th>
+								<td>123456</td>
+								<td>John Doe</td>
+								<td>Lance Corperal</td>
+								<td>7</td>
+								<td><a href="#" class="btn btn-block btn-sm btn-outline-dark">></a></td>
+							</tr>
+							<tr>
+								<th scope="row">1</th>
+								<td>123456</td>
+								<td>John Doe</td>
+								<td>Lance Corperal</td>
+								<td>7</td>
+								<td><a href="#" class="btn btn-block btn-sm btn-outline-dark">></a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<!-- jQuery first, then Popper.js (included in bundle), then Bootstrap JS -->
+		<script src="./src/vendors/jquery-3.4.1/jquery-3.4.1.slim.js"></script>
+		<script src="./src/vendors/bootstrap-4.4.1-dist/js/bootstrap.bundle.js"></script>
+	</body>
+</html>
