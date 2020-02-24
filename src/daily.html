@@ -6,10 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="./src/vendors/bootstrap-4.4.1-dist/css/bootstrap.css">
+		<link rel="stylesheet" href="./vendors/bootstrap-4.4.1-dist/css/bootstrap.css">
 		
 		<!-- FontAwesome :) -->
-		<script src="./src/vendors/fontawesome-free-5.12.0-web/js/all.js"></script>
+		<script src="./vendors/fontawesome-free-5.12.0-web/js/all.js"></script>
 
 		<title>Dailies</title>
 	</head>
@@ -67,15 +67,23 @@
 							<div class="mr-auto">
 								<h3>Assignments of the day</h3>
 								<div class="d-flex align-items-baseline">
-									<button class="btn btn-sm btn-outline-primary"><</button>
+									<!-- RETRIEVE DAY VALUE FROM CONTROLLER /year/month/day-1 -->
+									<form action="" method="GET">
+										<button class="btn btn-sm btn-outline-primary"><span><i class="fa fa-caret-left"></i></span></button>
+									</form>
 									<h6 class="mx-3">Wednesday, 29 January 2020</h6>
-									<button class="btn btn-sm btn-outline-primary">></button>
+									<!-- RETRIEVE DAY VALUE FROM CONTROLLER /year/month/day+1 -->
+									<form action="" method="GET">
+										<button class="btn btn-sm btn-outline-primary"><span><i class="fa fa-caret-right"></i></span></button>
+									</form>
 								</div>
 							</div>
 							<div>
 								<h1>All Guards <span class="text-muted">Initialized</span></h1>
 								<p>Please click the button below to update the database</p>
-								<button class="btn btn-block btn-primary">Initialize for 28 guards</button>
+								<form action="" method="POST">
+									<button class="btn btn-block btn-primary">Initialize for 28 guards</button>
+								</form>
 							</div>
 
 						</div>
@@ -133,9 +141,9 @@
 							</tr>
 							<tr class="table-warning">
 								<th scope="row">3</th>
-								<td class="text-right">L/Konst/PB</td>
-								<td class="text-right">23167</td>
-								<td class="text-right">Halmi</td>
+								<td class="daily--prefix text-right">L/Konst/PB</td>
+								<td class="daily--id text-right">23167</td>
+								<td class="daily--name text-right">Halmi</td>
 								<td>A</td>
 								<td>Tugas Am</td>
 								<td>Pos 1</td>
@@ -224,26 +232,27 @@
 										</form>
 									</div>
 									<div class="tab-pane fade" id="leaveForm" role="tabpanel">
-										<form method="POST" action="">
+										<form action="" method="POST">
 											<div class="form-row">
 												<div class="form-group col-12">
 													<label for="leaveType">Type</label>
-													<select id="leaveType" class="form-control">
+													<select id="leaveType" name="leaveType" class="form-control" required>
 														<option selected disabled hidden>Choose Leave...</option>
-														<option>Rest</option>
-														<option>Medical</option>
-														<option>Replacement</option>
-														<option>Without record</option>
-														<option>Emergency Leave</option>
-													</select>
+														<option value="CR">Rest</option>
+														<option value="CS">Medical</option>
+														<option value="CG">Replacement</option>
+														<option value="CTR">Without record</option>
+														<option value="EL">Emergency Leave</option>
+												</select>
 												</div>
 												<div class="form-group col-12">
 													<label for="leaveDesc">Description</label>
 													<textarea id="leaveDesc" class="form-control" rows="3" placeholder="Leave blank if no description..."></textarea>
 												</div>
 											</div>
+											<!-- Validate this input in controllers -->
 											<input class="form-id" name="id" type="text" value="N/A" hidden>
-											<button type="submit" class="btn btn-block btn-primary">Save Leave Status</button>
+											<button type="submit" class="btn btn-block btn-primary">Save Leave</button>
 										</form>
 									</div>
 									<div class="tab-pane fade" id="reForm" role="tabpanel">
@@ -306,8 +315,8 @@
 		</section>
 
 		<!-- jQuery first, then Popper.js (included in bundle), then Bootstrap JS -->
-		<script src="./src/vendors/jquery-3.4.1/jquery-3.4.1.slim.js"></script>
-		<script src="./src/vendors/bootstrap-4.4.1-dist/js/bootstrap.bundle.js"></script>
+		<script src="./vendors/jquery-3.4.1/jquery-3.4.1.slim.js"></script>
+		<script src="./vendors/bootstrap-4.4.1-dist/js/bootstrap.bundle.js"></script>
 		<script>
 			$('.daily--remark-add-btn, .daily--remark-remove-btn').click('on', function() {
 				let rowId = Number( this.id.replace('daily--edit-btn-', '') );
