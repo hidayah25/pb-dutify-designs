@@ -1050,6 +1050,11 @@
 
 				* Append found data into form
 			*/
+			/* Global array declaration? */
+			let rotationOffset;
+			let rotationRepeat;
+			let rotationRest;
+			let rotationArrangement;
 			$('.monthly--edit-btn').click(function() {
 				// Retreive the id, and extract the index number
 				let rowId = Number( this.id.replace('monthly--edit-btn-', '') );
@@ -1058,10 +1063,10 @@
 				let alias = selectRow('#monthly--alias', rowId);
 				let duty = selectRow('#monthly--duty', rowId);
 
-				let rotationOffset = Number( selectRow('#monthly--rotation-offset', rowId).text() );
-				let rotationRepeat = Number( selectRow('#monthly--rotation-repeat', rowId).text() );
-				let rotationRest = Number( selectRow('#monthly--rotation-rest', rowId).text() );
-				let rotationArrangement = selectRow('#monthly--rotation-arrangement', rowId).text();
+				rotationOffset = Number( selectRow('#monthly--rotation-offset', rowId).text() );
+				rotationRepeat = Number( selectRow('#monthly--rotation-repeat', rowId).text() );
+				rotationRest = Number( selectRow('#monthly--rotation-rest', rowId).text() );
+				rotationArrangement = selectRow('#monthly--rotation-arrangement', rowId).text();
 
 				////////////////////////////////////
 				// FORM / DISPLAY INITIAL ASSIGNMENT
@@ -1083,35 +1088,41 @@
 						$(this).attr('selected', 'selected');
 					}
 				});
+				// == CHANGE Arrangement, Repeat, and Rest set value
+				$('#monthly--edit-rearrange-form-arrangement').val(rotationArrangement);
+				$('#monthly--edit-rearrange-form-repeat').val(rotationRepeat);
+				$('#monthly--edit-rearrange-form-rest').val(rotationRest);
 				//////////// End
 
+				constructRearrange(rotationOffset, rotationRepeat, rotationRest, rotationArrangement);
+			});
+
+			function constructRearrange(ROTATIONOFFSET, ROTATIONREPEAT, ROTATIONREST, ROTATIONARRANGEMENT) {
 				////////////////////////////////////
 				//  SHIFTS REARRANGE CONSTRUCTION
 				////////////////////////////////////
-
-
 				let shiftArr = [];
-				let shifts = rotationArrangement.split('');
+				let shifts = ROTATIONARRANGEMENT.split('');
 				// == Create shifts array for 7 days
 				// == Reset to first shift when exceeds
 				let currentCounter = 0;
 				for (let i = 0; i < 7; i++) {
 					// Increment currentCounter every i is in multiplication of rotationRepeat
-					if(i !== 0 && i % rotationRepeat === 0) { ++currentCounter; }
+					if(i !== 0 && i % ROTATIONREPEAT === 0) { ++currentCounter; }
 					// Reset currentCounter when exceeds shifts length;
 					if(currentCounter >= shifts.length) { currentCounter=0; }
 					shiftArr.push(shifts[currentCounter]);
 				}
 				// == Update array with rest days; pop and push
-				for(let i=0; i<rotationRest; i++) {
+				for(let i=0; i<ROTATIONREST; i++) {
 					shiftArr.pop();
 				}
-				for(let i=0; i<rotationRest; i++) {
+				for(let i=0; i<ROTATIONREST; i++) {
 					shiftArr.push('R');
 				}
 
 				// == Reorder shiftArr according to offset
-				for(let i=0; i<rotationOffset; i++) {
+				for(let i=0; i<ROTATIONOFFSET; i++) {
 					// Pop the end, unshift into the beginning
 					shiftArr.unshift(shiftArr.pop());
 				}
@@ -1119,7 +1130,7 @@
 				shiftArr.forEach((item, i) => {
 					selectShift(i).removeAttr('id');
 					selectShift(i).removeClass('table-dark');
-					if(i == rotationOffset) {
+					if(i == ROTATIONOFFSET) {
 						selectShift(i).attr('id', 'monthly--edit-rearrange-offset');
 					}
 					// Append text
@@ -1128,8 +1139,35 @@
 					if(selectShift(i).text() === 'R') { selectShift(i).addClass('table-dark'); }
 				});
 				//////////// End
+			}
 
-			});
+			////////////////////////////////////
+			//  SHIFTS ATTRIBUTE SELECTION UPDATE
+			////////////////////////////////////
+			$('#monthly--edit-rearrange-form-arrangement').on('change', function() {
+				/* TODO: If arrangement:
+				        CBA    BA    A     P
+				Repeat  2      3     1     1
+				Rest    1      1     2     2
+
+				Update selected input value to match
+				*/
+				rotationArrangement = $("option:selected", this).val();
+				constructRearrange(rotationOffset, rotationRepeat, rotationRest, rotationArrangement);
+			})
+			$('#monthly--edit-rearrange-form-repeat').on('change', function() {
+				rotationRepeat = $("option:selected", this).val();
+				console.log(rotationRepeat);
+				constructRearrange(rotationOffset, rotationRepeat, rotationRest, rotationArrangement);
+			})
+			$('#monthly--edit-rearrange-form-rest').on('change', function() {
+				rotationRest = $("option:selected", this).val();
+				console.log(rotationRest);
+				constructRearrange(rotationOffset, rotationRepeat, rotationRest, rotationArrangement);
+			})
+			//////////// End
+
+
 			// Functions:
 			// 			== that selects an attribute in specific table row
 			function selectRow(target, rowId) { return $(target, $('#monthly--table tbody tr').eq(rowId)) }
