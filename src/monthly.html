@@ -150,12 +150,11 @@
 								<tr>
 									<th scope="row">1</th>
 									<td id="monthly--id" hidden>23176</td>
-									<td id="monthly--gender" hidden>Male</td>
 									<td id="monthly--rotation-offset" hidden>0</td>
 									<td id="monthly--rotation-repeat" hidden>1</td>
 									<td id="monthly--rotation-rest" hidden>2</td>
 									<td id="monthly--rotation-arrangement" hidden>P</td>
-									<td id="monthly--alias" class="w-10">Kpl/PB 23176 Mohd Tazarudin</td>
+									<td id="monthly--member-alias" class="w-10">Kpl/PB 23176 Mohd Tazarudin</td>
 									<td
 										id="monthly--duty"
 										data-toggle="tooltip"
@@ -826,15 +825,7 @@
 									<td id="monthly--id" hidden>23176</td>
 									<td id="monthly--gender" hidden>Female</td>
 									<td id="monthly--alias" class="w-10">L/KPL/W/PB 23160 Nor Baizura</td>
-									<td
-										id="monthly--duty"
-										data-toggle="tooltip"
-										data-placement="top"
-										title="Ketua Syif"
-									>
-										KS
-									</td>
-									<td>
+									<td colspan="2">
 										<form action="" method="PUT">
 											<button type="button" class="btn btn-sm btn-block btn-outline-light">
 												<span><i class="fa fa-plus"></i></span>
@@ -1059,9 +1050,9 @@
 				// Retreive the id, and extract the index number
 				let rowId = Number( this.id.replace('monthly--edit-btn-', '') );
 				// Extract attributes
-				let id = selectRow('#monthly--id', rowId);
-				let alias = selectRow('#monthly--alias', rowId);
-				let duty = selectRow('#monthly--duty', rowId);
+				let monthlyId = selectRow('#monthly--id', rowId);
+				let memberAlias = selectRow('#monthly--member-alias', rowId);
+				let monthlyDuty = selectRow('#monthly--duty', rowId);
 
 				rotationOffset = Number( selectRow('#monthly--rotation-offset', rowId).text() );
 				rotationRepeat = Number( selectRow('#monthly--rotation-repeat', rowId).text() );
@@ -1072,9 +1063,9 @@
 				// FORM / DISPLAY INITIAL ASSIGNMENT
 				////////////////////////////////////
 				// == Assign alias to modal header
-				$('#editModalAlias').text(alias.text());
+				$('#editModalAlias').text(memberAlias.text());
 				// == ID set value both forms
-				$('.monthly--edit-form-id').attr('value', id.text());
+				$('.monthly--edit-form-id').attr('value', monthlyId.text());
 				// == REARRANGE SHIFT set value offset
 				$('#monthly--edit-rearrange-form-offset').attr('value', rotationOffset);
 				// == CHANGE DUTY set value
@@ -1082,7 +1073,7 @@
 					// Clear up selected attribute from all elements
 					$(this).removeAttr('selected');
 					// Found item as boolean
-					let found = $(this).val() == duty.text().trim();
+					let found = $(this).val() == monthlyDuty.text().trim();
 					if(found) {
 						// Set attribute selected
 						$(this).attr('selected', 'selected');
