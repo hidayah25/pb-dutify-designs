@@ -117,7 +117,7 @@
 								<td>Tugas Am</td>
 								<td>Pos 1</td>
 								<td>
-									<button id="daily--edit-btn-0" type="button" class="daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#editModal">
+									<button id="daily--edit-btn-0" type="button" class="daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#addModal">
 										<span><i class="fa fa-angle-right"></i></span>
 									</button>
 								</td>
@@ -134,7 +134,7 @@
 								<td>Tugas Am</td>
 								<td>Pos 1</td>
 								<td>
-									<button id="daily--edit-btn-1" type="button" class="daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#editModal">
+									<button id="daily--edit-btn-1" type="button" class="daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#addModal">
 										<span><i class="fa fa-angle-right"></i></span>
 									</button>
 								</td>
@@ -189,8 +189,8 @@
 					</table>
 				</div>
 
-				<!-- Edit Modal -->
-				<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+				<!-- Add Modal -->
+				<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -212,7 +212,7 @@
 											<div class="form-row">
 												<div class="form-group col-12">
 													<label for="overtime-shift">Shift</label>
-													<select name="overtime-shift" id="overtime-shift" class="form-control">
+													<select name="overtime-shift" id="overtime-shift" class="form-control" required>
 														<option selected disabled hidden>Choose a shift...</option>
 														<option>A: 0700 - 1500</option>
 														<option>B: 1500 - 2300</option>
@@ -221,7 +221,7 @@
 												</div>                            
 												<div class="form-group col-12">
 													<label for="overtime-location">Location</label>
-													<select name="overtime-location" id="overtime-location" class="form-control">
+													<select name="overtime-location" id="overtime-location" class="form-control" required>
 														<option selected disabled hidden>Choose Location...</option>
 														<option value="POS1">Pos 1 - Gate A</option>
 														<option value="POS2">Pos 2 - Gate B</option>
