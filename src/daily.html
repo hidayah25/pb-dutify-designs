@@ -6,10 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="./src/vendors/bootstrap-4.4.1-dist/css/bootstrap.css">
+		<link rel="stylesheet" href="./vendors/bootstrap-4.4.1-dist/css/bootstrap.css">
 		
 		<!-- FontAwesome :) -->
-		<script src="./src/vendors/fontawesome-free-5.12.0-web/js/all.js"></script>
+		<script src="./vendors/fontawesome-free-5.12.0-web/js/all.js"></script>
 
 		<title>Dailies</title>
 	</head>
@@ -67,15 +67,23 @@
 							<div class="mr-auto">
 								<h3>Assignments of the day</h3>
 								<div class="d-flex align-items-baseline">
-									<button class="btn btn-sm btn-outline-primary"><</button>
+									<!-- RETRIEVE DAY VALUE FROM CONTROLLER /year/month/day-1 -->
+									<form action="" method="GET">
+										<button class="btn btn-sm btn-outline-primary"><span><i class="fa fa-caret-left"></i></span></button>
+									</form>
 									<h6 class="mx-3">Wednesday, 29 January 2020</h6>
-									<button class="btn btn-sm btn-outline-primary">></button>
+									<!-- RETRIEVE DAY VALUE FROM CONTROLLER /year/month/day+1 -->
+									<form action="" method="GET">
+										<button class="btn btn-sm btn-outline-primary"><span><i class="fa fa-caret-right"></i></span></button>
+									</form>
 								</div>
 							</div>
 							<div>
 								<h1>All Guards <span class="text-muted">Initialized</span></h1>
 								<p>Please click the button below to update the database</p>
-								<button class="btn btn-block btn-primary">Initialize for 28 guards</button>
+								<form action="" method="POST">
+									<button class="btn btn-block btn-primary">Initialize for 28 guards</button>
+								</form>
 							</div>
 
 						</div>
@@ -101,14 +109,15 @@
 						<tbody>
 							<tr>
 								<th scope="row">1</th>
-								<td class="daily--prefix text-right">Kpl/PB</td>
-								<td class="daily--id text-right">23158</td>
-								<td class="daily--name text-right">Halimah</td>
+								<td class="daily--id text-right d-none">23158</td>
+								<td class="daily--member-prefix text-right">Kpl/PB</td>
+								<td class="daily--member-id text-right">23158</td>
+								<td class="daily--member-name text-right">Halimah</td>
 								<td>A</td>
 								<td>Tugas Am</td>
 								<td>Pos 1</td>
 								<td>
-									<button id="daily--edit-btn-0" type="button" class="daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#editModal">
+									<button id="daily--edit-btn-0" type="button" class="daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#addModal">
 										<span><i class="fa fa-angle-right"></i></span>
 									</button>
 								</td>
@@ -117,14 +126,15 @@
 							</tr>
 							<tr>
 								<th scope="row">2</th>
-								<td class="daily--prefix text-right">Konst/PB</td>
-								<td class="daily--id text-right">23189</td>
-								<td class="daily--name text-right">Mohd Alif</td>
+								<td class="daily--id text-right d-none">23189</td>
+								<td class="daily--member-prefix text-right">Konst/PB</td>
+								<td class="daily--member-id text-right">23189</td>
+								<td class="daily--member-name text-right">Mohd Alif</td>
 								<td>A</td>
 								<td>Tugas Am</td>
 								<td>Pos 1</td>
 								<td>
-									<button id="daily--edit-btn-1" type="button" class="daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#editModal">
+									<button id="daily--edit-btn-1" type="button" class="daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#addModal">
 										<span><i class="fa fa-angle-right"></i></span>
 									</button>
 								</td>
@@ -133,9 +143,9 @@
 							</tr>
 							<tr class="table-warning">
 								<th scope="row">3</th>
-								<td class="text-right">L/Konst/PB</td>
-								<td class="text-right">23167</td>
-								<td class="text-right">Halmi</td>
+								<td class="daily--prefix text-right">L/Konst/PB</td>
+								<td class="daily--id text-right">23167</td>
+								<td class="daily--name text-right">Halmi</td>
 								<td>A</td>
 								<td>Tugas Am</td>
 								<td>Pos 1</td>
@@ -153,7 +163,9 @@
 								<td class="daily--id text-right">23189</td>
 								<td class="daily--name text-right">Mohd Alif</td>
 								<td colspan="2" style="height: 1px;">
-									<button class="btn btn-block h-100 btn-light btn-sm"><i class="fa fa-plus"></i></button>
+									<form action="">
+										<button class="btn btn-block h-100 btn-light btn-sm"><i class="fa fa-plus"></i></button>
+									</form>
 								</td>
 								<td colspan="4" class="text-center align-middle">
 									<span>Daily not initialized. Please click the add button</span>
@@ -165,7 +177,9 @@
 								<td class="daily--id text-right">23189</td>
 								<td class="daily--name text-right">Mohd Alif</td>
 								<td colspan="2" style="height: 1px;">
-									<button class="btn btn-block h-100 btn-light btn-sm"><i class="fa fa-plus"></i></button>
+									<form action="">
+										<button class="btn btn-block h-100 btn-light btn-sm"><i class="fa fa-plus"></i></button>
+									</form>
 								</td>
 								<td colspan="4" class="text-center align-middle">
 									<span>Daily + Monthly not initialized. Please click the add button</span>
@@ -175,8 +189,8 @@
 					</table>
 				</div>
 
-				<!-- Edit Modal -->
-				<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+				<!-- Add Modal -->
+				<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -186,19 +200,19 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<h5><span class="form-prefix">PREFIX:N/A</span> <span class="form-id">ID:N/A</span> <span class="form-name">NAME:N/A</span></h5>
+								<h5><span class="form-member-prefix">PREFIX:N/A</span> <span class="form-member-id">ID:N/A</span> <span class="form-member-name">NAME:N/A</span></h5>
 								<div class="list-group list-group-horizontal w-100 mb-3" id="weeklyEditList" role="tablist">
-									<a class="list-group-item list-group-item-action flex-fill active" data-toggle="list" href="#overtimeForm" role="tab">Overtime</a>
-									<a class="list-group-item list-group-item-action flex-fill" data-toggle="list" href="#leaveForm" role="tab">Leave</a>
-									<a class="list-group-item list-group-item-action flex-fill" data-toggle="list" href="#reForm" role="tab">Reschedule</a>
+									<a class="list-group-item list-group-item-action flex-fill active" data-toggle="list" href="#overtime-form" role="tab">Overtime</a>
+									<a class="list-group-item list-group-item-action flex-fill" data-toggle="list" href="#leave-form" role="tab">Leave</a>
+									<a class="list-group-item list-group-item-action flex-fill" data-toggle="list" href="#substitute-form" role="tab">Substitute</a>
 								</div>
 								<div class="tab-content">
-									<div class="tab-pane fade show active" id="overtimeForm" role="tabpanel">
+									<div class="tab-pane fade show active" id="overtime-form" role="tabpanel">
 										<form>
 											<div class="form-row">
 												<div class="form-group col-12">
-													<label for="overtimeShift">Shift</label>
-													<select id="overtimeShift" class="form-control">
+													<label for="overtime-shift">Shift</label>
+													<select name="overtime-shift" id="overtime-shift" class="form-control" required>
 														<option selected disabled hidden>Choose a shift...</option>
 														<option>A: 0700 - 1500</option>
 														<option>B: 1500 - 2300</option>
@@ -206,8 +220,8 @@
 													</select>
 												</div>                            
 												<div class="form-group col-12">
-													<label for="overtimeLocation">Location</label>
-													<select id="overtimeLocation" class="form-control">
+													<label for="overtime-location">Location</label>
+													<select name="overtime-location" id="overtime-location" class="form-control" required>
 														<option selected disabled hidden>Choose Location...</option>
 														<option value="POS1">Pos 1 - Gate A</option>
 														<option value="POS2">Pos 2 - Gate B</option>
@@ -219,47 +233,44 @@
 													</select>
 												</div>
 											</div>
-											<input class="form-id" name="id" type="text" value="N/A" hidden>
+											<input class="form-daily-id" name="daily-id" type="text" value="N/A" hidden>
 											<button type="submit" class="btn btn-block btn-primary">Save Assignment</button>
 										</form>
 									</div>
-									<div class="tab-pane fade" id="leaveForm" role="tabpanel">
-										<form method="POST" action="">
+									<div class="tab-pane fade" id="leave-form" role="tabpanel">
+										<form action="" method="POST">
 											<div class="form-row">
 												<div class="form-group col-12">
-													<label for="leaveType">Type</label>
-													<select id="leaveType" class="form-control">
+													<label for="leave-type">Type</label>
+													<select name="leave-type" id="leave-type" class="form-control" required>
 														<option selected disabled hidden>Choose Leave...</option>
-														<option>Rest</option>
-														<option>Medical</option>
-														<option>Replacement</option>
-														<option>Without record</option>
-														<option>Emergency Leave</option>
+														<option value="CR">Rest</option>
+														<option value="CS">Medical</option>
+														<option value="CG">Replacement</option>
+														<option value="CTR">Without record</option>
+														<option value="EL">Emergency Leave</option>
 													</select>
 												</div>
 												<div class="form-group col-12">
-													<label for="leaveDesc">Description</label>
-													<textarea id="leaveDesc" class="form-control" rows="3" placeholder="Leave blank if no description..."></textarea>
+													<label for="leave-description">Description</label>
+													<textarea name="leave-description" id="leave-description" class="form-control" rows="3" placeholder="Leave blank if no description..."></textarea>
 												</div>
 											</div>
-											<input class="form-id" name="id" type="text" value="N/A" hidden>
-											<button type="submit" class="btn btn-block btn-primary">Save Leave Status</button>
+											<!-- Validate this input in controllers -->
+											<input class="form-daily-id" name="daily-id" type="text" value="N/A" hidden>
+											<button type="submit" class="btn btn-block btn-primary">Save Leave</button>
 										</form>
 									</div>
-									<div class="tab-pane fade" id="reForm" role="tabpanel">
+									<div class="tab-pane fade" id="substitute-form" role="tabpanel">
 										<form method="POST" action="">
 											<div class="form-row">
 												<div class="form-group col-12">
-													<label for="reLocation">Location</label>
-													<select id="reLocation" class="form-control">
-														<option selected disabled hidden>Choose Location...</option>
-														<option>Pos 1 - Gate A</option>
-														<option>Pos 2 - Gate B</option>
-														<option>Pos 3 - Akademik</option>
-														<option>Pos 4 - Hotel</option>
-														<option>Pos 5 - PHN/DYG/KARAH</option>
-														<option>Pos 6 - RD/TGL/GM</option>
-														<option>Pos 7 - Office</option>
+													<label for="substitute-daily">Member</label>
+													<select id="substitute-daily" name="substitute-daily" class="form-control">
+														<option selected disabled hidden>Choose Member...</option>
+														<!-- Initialized on page init -->
+														<option value="23158">23158 Halimah</option>
+														<option value="23189">23189 Mohd Alif</option>
 													</select>
 												</div>
 												<div class="form-group col-12">
@@ -267,7 +278,7 @@
 													<textarea id="reDesc" class="form-control" rows="3" placeholder="Leave blank if no description..."></textarea>
 												</div>
 											</div>
-											<input class="form-id" name="id" type="text" value="N/A" hidden>
+											<input class="form-daily-id" name="daily-id" type="text" value="N/A" hidden>
 											<button type="submit" class="btn btn-block btn-primary">Save Rescheduling</button>
 										</form>
 									</div>
@@ -293,7 +304,7 @@
 								<div class="d-flex">
 									<button type="button" class="btn btn-default btn-outline-secondary ml-auto mr-2" data-dismiss="modal">Cancel</button>
 									<form action="" method="POST">
-										<input class="form-id" name="id" type="text" value="N/A" hidden>
+										<input class="form-daily-id" name="form-daily-id" type="text" value="N/A" hidden>
 										<button type="submit" class="btn btn-default btn-outline-danger">Yes, delete it!</button>
 									</form>
 								</div>
@@ -306,22 +317,37 @@
 		</section>
 
 		<!-- jQuery first, then Popper.js (included in bundle), then Bootstrap JS -->
-		<script src="./src/vendors/jquery-3.4.1/jquery-3.4.1.slim.js"></script>
-		<script src="./src/vendors/bootstrap-4.4.1-dist/js/bootstrap.bundle.js"></script>
+		<script src="./vendors/jquery-3.4.1/jquery-3.4.1.slim.js"></script>
+		<script src="./vendors/bootstrap-4.4.1-dist/js/bootstrap.bundle.js"></script>
 		<script>
 			$('.daily--remark-add-btn, .daily--remark-remove-btn').click('on', function() {
 				let rowId = Number( this.id.replace('daily--edit-btn-', '') );
-				let prefix = selectRow('.daily--prefix', rowId).text();
-				let id = selectRow('.daily--id', rowId).text();
-				let name = selectRow('.daily--name', rowId).text();
+				let dailyId = selectRow('.daily--id', rowId).text();
+				let memberPrefix = selectRow('.daily--member-prefix', rowId).text();
+				let memberId = selectRow('.daily--member-id', rowId).text();
+				let memberName = selectRow('.daily--member-name', rowId).text();
 
-				$('span.form-prefix').text(prefix);
-				$('span.form-id').text(id);
-				$('span.form-name').text(name);
+				$('span.form-daily-id').text(dailyId);
+				$('span.form-member-prefix').text(memberPrefix);
+				$('span.form-member-id').text(memberId);
+				$('span.form-member-name').text(memberName);
 
-				$('input.form-id').attr('value', id);
+				// Input value attribute for forms
+				$('input.form-daily-id').attr('value', dailyId);
 
-				console.info(`${prefix}\n${id}\n${name}`);
+				// console.info(`${prefix}\n${id}\n${name}`);
+
+				// If member id matches, d-none it
+				$('#substitute-daily option').each(function (i) {
+					if(i!==0) {
+						console.log($(this).val());
+						console.log(memberId);
+						$(this).removeClass('d-none');
+						if($(this).val() === memberId) {
+							$(this).addClass('d-none');
+						}
+					}
+				});
 			});
 
 			// Functions:
