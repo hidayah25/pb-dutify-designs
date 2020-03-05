@@ -57,7 +57,7 @@
 			</div>
 		</nav>
 
-		<section id="section--daily--index" class="mt-5 container">
+		<section id="section--daily--index" class="mt-5 container-fluid">
 			<div class="row">
 
 				<div class="col-12">
@@ -99,11 +99,13 @@
 								<th scope="col" rowspan="2">Task</th>
 								<th scope="col" rowspan="2">Location</th>
 								<th scope="col" colspan="2">Remarks</th>
-								<th scope="col" rowspan="2">Description</th>
+								<th scope="col" colspan="2">Details</th>
 							</tr>
 							<tr>
 								<td>Edit</td>
 								<td>Type</td>
+								<td>Target</td>
+								<td>Description / Location</td>
 							</tr>
 						</thead>
 						<tbody>
@@ -116,12 +118,13 @@
 								<td>A</td>
 								<td>Tugas Am</td>
 								<td>Pos 1</td>
-								<td>
-									<button id="daily--edit-btn-0" type="button" class="daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#addModal">
+								<td class="p-0 align-middle" style="height: 1px;">
+									<button id="daily--edit-btn-0" type="button" class="h-100 daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#addModal">
 										<span><i class="fa fa-angle-right"></i></span>
 									</button>
 								</td>
 								<td></td>
+								<td class="text-muted">N/A</td>
 								<td class="text-muted">No remarks</td>
 							</tr>
 							<tr>
@@ -133,15 +136,16 @@
 								<td>A</td>
 								<td>Tugas Am</td>
 								<td>Pos 1</td>
-								<td>
-									<button id="daily--edit-btn-1" type="button" class="daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#addModal">
+								<td class="p-0 align-middle" style="height: 1px;">
+									<button id="daily--edit-btn-1" type="button" class="h-100 daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#addModal">
 										<span><i class="fa fa-angle-right"></i></span>
 									</button>
 								</td>
 								<td></td>
+								<td class="text-muted">N/A</td>
 								<td class="text-muted">No remarks</td>
 							</tr>
-							<tr class="table-warning">
+							<tr class="table-info">
 								<th scope="row">3</th>
 								<td class="daily--prefix text-right">L/Konst/PB</td>
 								<td class="daily--id text-right">23167</td>
@@ -149,41 +153,78 @@
 								<td>A</td>
 								<td>Tugas Am</td>
 								<td>Pos 1</td>
-								<td>
-									<button id="daily--edit-btn-2" type="button" class="daily--remark-remove-btn btn btn-block btn-sm btn-outline-danger" data-toggle="modal" data-target="#deleteModal">
+								<td class="p-0 align-middle" style="height: 1px;">
+									<button id="daily--edit-btn-2" type="button" class="h-100 daily--remark-remove-btn btn btn-block btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal">
 										<span><i class="fa fa-times"></i></span>
 									</button>
 								</td>
-								<td>CS</td>
-								<td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur modi vel voluptas asperiores harum quod alias pariatur qui nulla excepturi.</td>
+								<td class="align-middle text-center">CS</td>
+								<td class="text-muted">N/A</td>
+								<td>
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur modi vel voluptas asperiores harum quod alias pariatur qui nulla excepturi.
+								</td>
 							</tr>
 							<tr class="bg-dark text-light">
 								<th scope="row">4</th>
 								<td class="daily--prefix text-right">Konst/PB</td>
 								<td class="daily--id text-right">23189</td>
 								<td class="daily--name text-right">Mohd Alif</td>
-								<td colspan="2" style="height: 1px;">
-									<form action="">
-										<button class="btn btn-block h-100 btn-light btn-sm"><i class="fa fa-plus"></i></button>
+								<td colspan="2" class="p-0 align-middle" style="height: 1px;">
+									<form action="" class="h-100">
+										<button class="h-100 btn btn-block btn-outline-light btn-sm"><i class="fa fa-plus"></i></button>
 									</form>
 								</td>
-								<td colspan="4" class="text-center align-middle">
+								<td colspan="5" class="text-center align-middle">
 									<span>Daily not initialized. Please click the add button</span>
 								</td>
 							</tr>
 							<tr class="bg-dark text-light">
-								<th scope="row">4</th>
+								<th scope="row">5</th>
 								<td class="daily--prefix text-right">Konst/PB</td>
 								<td class="daily--id text-right">23189</td>
 								<td class="daily--name text-right">Mohd Alif</td>
-								<td colspan="2" style="height: 1px;">
-									<form action="">
-										<button class="btn btn-block h-100 btn-light btn-sm"><i class="fa fa-plus"></i></button>
+								<td colspan="2" class="p-0 align-middle" style="height: 1px;">
+									<form action="" class="h-100">
+										<button class="h-100 btn btn-block btn-outline-light btn-sm"><i class="fa fa-plus"></i></button>
 									</form>
 								</td>
-								<td colspan="4" class="text-center align-middle">
+								<td colspan="5" class="text-center align-middle">
 									<span>Daily + Monthly not initialized. Please click the add button</span>
 								</td>
+							</tr>
+							<tr class="table-info">
+								<th scope="row">6</th>
+								<td class="daily--prefix text-right">L/Konst/PB</td>
+								<td class="daily--id text-right">23167</td>
+								<td class="daily--name text-right">Halmi</td>
+								<td>A</td>
+								<td>Tugas Am</td>
+								<td>DYG/KRH/TG</td>
+								<td class="align-middle p-0" style="height: 1px;">
+									<button id="daily--edit-btn-2" type="button" class="h-100 daily--remark-remove-btn btn btn-block btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal">
+										<span><i class="fa fa-times"></i></span>
+									</button>
+								</td>
+								<td class="align-middle text-center"><i class="fa fa-exchange-alt"></i></td>
+								<td>234567</td>
+								<td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur modi vel voluptas asperiores harum quod alias pariatur qui nulla excepturi.</td>
+							</tr>
+							<tr class="table-info">
+								<th scope="row">7</th>
+								<td class="daily--prefix text-right">L/Konst/PB</td>
+								<td class="daily--id text-right">23167</td>
+								<td class="daily--name text-right">Halmi</td>
+								<td>A</td>
+								<td>Tugas Am</td>
+								<td>Pos 4</td>
+								<td class="align-middle p-0" style="height: 1px;">
+									<button id="daily--edit-btn-2" type="zbutton" class="h-100 daily--remark-remove-btn btn btn-block btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal">
+										<span><i class="fa fa-times"></i></span>
+									</button>
+								</td>
+								<td class="align-middle text-center"><i class="fa fa-exchange-alt"></i></td>
+								<td>A</td>
+								<td>Hotel</td>
 							</tr>
 						</tbody>
 					</table>
