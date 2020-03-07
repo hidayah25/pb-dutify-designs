@@ -57,15 +57,15 @@
 			</div>
 		</nav>
 
-		<section id="section--daily--index" class="mt-5 container-fluid">
-			<div class="row">
+		<section id="section--daily--index" class="mt-3">
+			<div class="container-fluid">
 
-				<div class="col-12">
-					<div class="mb-4">
+				<div class="d-flex justify-content-between align-items-end mb-2">
+					<div>
 						<div class="d-flex flex-row align-items-end">
 
-							<div class="mr-auto">
-								<h3>Assignments of the day</h3>
+							<div>
+								<h4>Daily Scheduling</h4>
 								<div class="d-flex align-items-baseline">
 									<!-- RETRIEVE DAY VALUE FROM CONTROLLER /year/month/day-1 -->
 									<form action="" method="GET">
@@ -78,157 +78,174 @@
 									</form>
 								</div>
 							</div>
-							<div>
-								<h1>All Guards <span class="text-muted">Initialized</span></h1>
+							<!-- <div>
+								<h1 class="d-none">All Guards <span class="text-muted">Initialized</span></h1>
 								<p>Please click the button below to update the database</p>
 								<form action="" method="POST">
 									<button class="btn btn-block btn-primary">Initialize for 28 guards</button>
 								</form>
-							</div>
+							</div> -->
 
 						</div>
 					</div>
-					<table id="daily--table" class="table table-sm table-bordered table-hover">
-						<thead>
-							<tr>
-								<th scope="col" rowspan="2">No.</th>
-								<th scope="col" rowspan="2" class="text-right">Rank</th>
-								<th scope="col" rowspan="2" class="text-right">Id</th>
-								<th scope="col" rowspan="2" class="text-right">Name</th>
-								<th scope="col" rowspan="2">Shift</th>
-								<th scope="col" rowspan="2">Task</th>
-								<th scope="col" rowspan="2">Location</th>
-								<th scope="col" colspan="2">Remarks</th>
-								<th scope="col" colspan="2">Details</th>
-							</tr>
-							<tr>
-								<td>Edit</td>
-								<td>Type</td>
-								<td>Target</td>
-								<td>Description / Location</td>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">1</th>
-								<td class="daily--id text-right d-none">23158</td>
-								<td class="daily--member-prefix text-right">Kpl/PB</td>
-								<td class="daily--member-id text-right">23158</td>
-								<td class="daily--member-name text-right">Halimah</td>
-								<td>A</td>
-								<td>Tugas Am</td>
-								<td>Pos 1</td>
-								<td class="p-0 align-middle" style="height: 1px;">
-									<button id="daily--edit-btn-0" type="button" class="h-100 daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#addModal">
-										<span><i class="fa fa-angle-right"></i></span>
-									</button>
-								</td>
-								<td></td>
-								<td class="text-muted">N/A</td>
-								<td class="text-muted">No remarks</td>
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td class="daily--id text-right d-none">23189</td>
-								<td class="daily--member-prefix text-right">Konst/PB</td>
-								<td class="daily--member-id text-right">23189</td>
-								<td class="daily--member-name text-right">Mohd Alif</td>
-								<td>A</td>
-								<td>Tugas Am</td>
-								<td>Pos 1</td>
-								<td class="p-0 align-middle" style="height: 1px;">
-									<button id="daily--edit-btn-1" type="button" class="h-100 daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#addModal">
-										<span><i class="fa fa-angle-right"></i></span>
-									</button>
-								</td>
-								<td></td>
-								<td class="text-muted">N/A</td>
-								<td class="text-muted">No remarks</td>
-							</tr>
-							<tr class="table-info">
-								<th scope="row">3</th>
-								<td class="daily--prefix text-right">L/Konst/PB</td>
-								<td class="daily--id text-right">23167</td>
-								<td class="daily--name text-right">Halmi</td>
-								<td>A</td>
-								<td>Tugas Am</td>
-								<td>Pos 1</td>
-								<td class="p-0 align-middle" style="height: 1px;">
-									<button id="daily--edit-btn-2" type="button" class="h-100 daily--remark-remove-btn btn btn-block btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal">
-										<span><i class="fa fa-times"></i></span>
-									</button>
-								</td>
-								<td class="align-middle text-center">CS</td>
-								<td class="text-muted">N/A</td>
-								<td>
-									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur modi vel voluptas asperiores harum quod alias pariatur qui nulla excepturi.
-								</td>
-							</tr>
-							<tr class="bg-dark text-light">
-								<th scope="row">4</th>
-								<td class="daily--prefix text-right">Konst/PB</td>
-								<td class="daily--id text-right">23189</td>
-								<td class="daily--name text-right">Mohd Alif</td>
-								<td colspan="2" class="p-0 align-middle" style="height: 1px;">
-									<form action="" class="h-100">
-										<button class="h-100 btn btn-block btn-outline-light btn-sm"><i class="fa fa-plus"></i></button>
-									</form>
-								</td>
-								<td colspan="5" class="text-center align-middle">
-									<span>Daily not initialized. Please click the add button</span>
-								</td>
-							</tr>
-							<tr class="bg-dark text-light">
-								<th scope="row">5</th>
-								<td class="daily--prefix text-right">Konst/PB</td>
-								<td class="daily--id text-right">23189</td>
-								<td class="daily--name text-right">Mohd Alif</td>
-								<td colspan="2" class="p-0 align-middle" style="height: 1px;">
-									<form action="" class="h-100">
-										<button class="h-100 btn btn-block btn-outline-light btn-sm"><i class="fa fa-plus"></i></button>
-									</form>
-								</td>
-								<td colspan="5" class="text-center align-middle">
-									<span>Daily + Monthly not initialized. Please click the add button</span>
-								</td>
-							</tr>
-							<tr class="table-info">
-								<th scope="row">6</th>
-								<td class="daily--prefix text-right">L/Konst/PB</td>
-								<td class="daily--id text-right">23167</td>
-								<td class="daily--name text-right">Halmi</td>
-								<td>A</td>
-								<td>Tugas Am</td>
-								<td>DYG/KRH/TG</td>
-								<td class="align-middle p-0" style="height: 1px;">
-									<button id="daily--edit-btn-2" type="button" class="h-100 daily--remark-remove-btn btn btn-block btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal">
-										<span><i class="fa fa-times"></i></span>
-									</button>
-								</td>
-								<td class="align-middle text-center"><i class="fa fa-exchange-alt"></i></td>
-								<td>234567</td>
-								<td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur modi vel voluptas asperiores harum quod alias pariatur qui nulla excepturi.</td>
-							</tr>
-							<tr class="table-info">
-								<th scope="row">7</th>
-								<td class="daily--prefix text-right">L/Konst/PB</td>
-								<td class="daily--id text-right">23167</td>
-								<td class="daily--name text-right">Halmi</td>
-								<td>A</td>
-								<td>Tugas Am</td>
-								<td>Pos 4</td>
-								<td class="align-middle p-0" style="height: 1px;">
-									<button id="daily--edit-btn-2" type="zbutton" class="h-100 daily--remark-remove-btn btn btn-block btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal">
-										<span><i class="fa fa-times"></i></span>
-									</button>
-								</td>
-								<td class="align-middle text-center"><i class="fa fa-exchange-alt"></i></td>
-								<td>A</td>
-								<td>Hotel</td>
-							</tr>
-						</tbody>
-					</table>
+					<button class="btn btn-outline-primary btn-sm"><span><i class="fa fa-print"></i></span> Generate report</button>
 				</div>
+
+
+				<table id="daily--table" class="table table-sm table-bordered table-hover">
+					<thead>
+						<tr class="bg-primary text-white">
+							<td colspan="11" class="text-center">
+								<button class="btn btn-sm btn-block btn-primary">
+									<strong>28</strong> members are not initialized with dailies. Click here to initialize.
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<th scope="col" rowspan="2">No.</th>
+							<th scope="col" rowspan="2" class="text-right">Rank</th>
+							<th scope="col" rowspan="2" class="text-right">Id</th>
+							<th scope="col" rowspan="2" class="text-right">Name</th>
+							<th scope="col" rowspan="2">Shift</th>
+							<th scope="col" rowspan="2">Task</th>
+							<th scope="col" rowspan="2">Location</th>
+							<th scope="col" colspan="2">Remarks</th>
+							<th scope="col" colspan="2">Details</th>
+						</tr>
+						<tr>
+							<td>Edit</td>
+							<td>Type</td>
+							<td>Target</td>
+							<td>Description / Location</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td class="daily--id text-right d-none">23158</td>
+							<td class="daily--remark-id text-right d-none">14</td>
+							<td class="daily--member-prefix text-right">Kpl/PB</td>
+							<td class="daily--member-id text-right">23158</td>
+							<td class="daily--member-name text-right">Halimah</td>
+							<td>A</td>
+							<td>Tugas Am</td>
+							<td><a id="daily--edit-btn-0" class="daily--edit-location-btn" href="#editLocationModal" data-toggle="modal" role="button">Pos 1</a></td>
+							<td class="p-0 align-middle" style="height: 1px;">
+								<button id="daily--edit-btn-0" type="button" class="h-100 daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#addModal">
+									<span><i class="fa fa-angle-right"></i></span>
+								</button>
+							</td>
+							<td></td>
+							<td class="text-muted">N/A</td>
+							<td class="text-muted">No remarks</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td class="daily--remark-id text-right d-none">15</td>
+							<td class="daily--id text-right d-none">23189</td>
+							<td class="daily--member-prefix text-right">Konst/PB</td>
+							<td class="daily--member-id text-right">23189</td>
+							<td class="daily--member-name text-right">Mohd Alif</td>
+							<td>A</td>
+							<td>Tugas Am</td>
+							<td><a id="daily--edit-btn-1" class="daily--edit-location-btn" href="#editLocationModal" data-toggle="modal" role="button">Pos 1</a></td>
+							<td class="p-0 align-middle" style="height: 1px;">
+								<button id="daily--edit-btn-1" type="button" class="h-100 daily--remark-add-btn btn btn-block btn-sm btn-outline-primary" data-toggle="modal" data-target="#addModal">
+									<span><i class="fa fa-angle-right"></i></span>
+								</button>
+							</td>
+							<td></td>
+							<td class="text-muted">N/A</td>
+							<td class="text-muted">No remarks</td>
+						</tr>
+						<tr class="table-info">
+							<th scope="row">3</th>
+							<td class="daily--remark-id text-right d-none">16</td>
+							<td class="daily--member-prefix text-right">L/Konst/PB</td>
+							<td class="daily--member-id text-right">23167</td>
+							<td class="daily--member-name text-right">Halmi</td>
+							<td>A</td>
+							<td>Tugas Am</td>
+							<td><a id="daily--edit-btn-2" class="daily--edit-location-btn" href="#editLocationModal" data-toggle="modal" role="button">Pos 1</a></td>
+							<td class="p-0 align-middle" style="height: 1px;">
+								<button data-remark-type="off" id="daily--edit-btn-2" type="button" class="h-100 daily--remark-remove-btn btn btn-block btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal">
+									<span><i class="fa fa-times"></i></span>
+								</button>
+							</td>
+							<td class="align-middle text-center">CS</td>
+							<td class="text-muted">N/A</td>
+							<td>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur modi vel voluptas asperiores harum quod alias pariatur qui nulla excepturi.
+							</td>
+						</tr>
+						<tr class="bg-dark text-light">
+							<th scope="row">4</th>
+							<td class="daily--remark-id text-right d-none">17</td>
+							<td class="daily--member-prefix text-right">Konst/PB</td>
+							<td class="daily--member-id text-right">23189</td>
+							<td class="daily--member-name text-right">Mohd Alif</td>
+							<td colspan="2" class="p-0 align-middle" style="height: 1px;">
+								<form action="" class="h-100">
+									<button class="h-100 btn btn-block btn-outline-light btn-sm"><i class="fa fa-plus"></i></button>
+								</form>
+							</td>
+							<td colspan="5" class="text-center align-middle">
+								<span>Daily not initialized. Please click the add button</span>
+							</td>
+						</tr>
+						<tr class="bg-dark text-light">
+							<th scope="row">5</th>
+							<td class="daily--remark-id text-right d-none">18</td>
+							<td class="daily--member-prefix text-right">Konst/PB</td>
+							<td class="daily--member-id text-right">23189</td>
+							<td class="daily--member-name text-right">Mohd Alif</td>
+							<td colspan="2" class="p-0 align-middle" style="height: 1px;">
+								<form action="" class="h-100">
+									<button class="h-100 btn btn-block btn-outline-light btn-sm"><i class="fa fa-plus"></i></button>
+								</form>
+							</td>
+							<td colspan="5" class="text-center align-middle">
+								<span>Daily + Monthly not initialized. Please click the add button</span>
+							</td>
+						</tr>
+						<tr class="table-info">
+							<th scope="row">6</th>
+							<td class="daily--remark-id text-right d-none">19</td>
+							<td class="daily--member-prefix text-right">L/Konst/PB</td>
+							<td class="daily--member-id text-right">23167</td>
+							<td class="daily--member-name text-right">Halmi</td>
+							<td>A</td>
+							<td>Tugas Am</td>
+							<td><a id="daily--edit-btn-5" class="daily--edit-location-btn" href="#editLocationModal" data-toggle="modal" role="button">DYG/KRH/TG</a></td>
+							<td class="align-middle p-0" style="height: 1px;">
+								<button data-remark-type="substitute" id="daily--edit-btn-5" type="button" class="h-100 daily--remark-remove-btn btn btn-block btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal">
+									<span><i class="fa fa-times"></i></span>
+								</button>
+							</td>
+							<td class="align-middle text-center"><i class="fa fa-exchange-alt"></i></td>
+							<td>234567</td>
+							<td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur modi vel voluptas asperiores harum quod alias pariatur qui nulla excepturi.</td>
+						</tr>
+						<tr class="table-info">
+							<th scope="row">7</th>
+							<td class="daily--remark-id text-right d-none">20</td>
+							<td class="daily--member-prefix text-right">L/Konst/PB</td>
+							<td class="daily--member-id text-right">23167</td>
+							<td class="daily--member-name text-right">Halmi</td>
+							<td>A</td>
+							<td>Tugas Am</td>
+							<td><a id="daily--edit-btn-6" class="daily--edit-location-btn" href="#editLocationModal" data-toggle="modal" role="button">Pos 4</a></td>
+							<td class="align-middle p-0" style="height: 1px;">
+								<button data-remark-type="overtime" id="daily--edit-btn-6" type="button" class="h-100 daily--remark-remove-btn btn btn-block btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal">
+									<span><i class="fa fa-times"></i></span>
+								</button>
+							</td>
+							<td class="align-middle text-center"><i class="fa fa-exchange-alt"></i></td>
+							<td>A</td>
+							<td>Hotel</td>
+						</tr>
+					</tbody>
+				</table>
 
 				<!-- Add Modal -->
 				<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
@@ -249,20 +266,41 @@
 								</div>
 								<div class="tab-content">
 									<div class="tab-pane fade show active" id="overtime-form" role="tabpanel">
-										<form>
+										<form id="add--overtime-form" action="" method="POST">
 											<div class="form-row">
 												<div class="form-group col-12">
 													<label for="overtime-shift">Shift</label>
-													<select name="overtime-shift" id="overtime-shift" class="form-control" required>
+													<select name="overtime_shift" id="overtime-shift" class="form-control" required>
 														<option selected disabled hidden>Choose a shift...</option>
-														<option>A: 0700 - 1500</option>
-														<option>B: 1500 - 2300</option>
-														<option>C: 2300 - 0700</option>
+														<option value="A">A: 0700 - 1500</option>
+														<option value="B">B: 1500 - 2300</option>
+														<option value="C">C: 2300 - 0700</option>
 													</select>
-												</div>                            
+												</div>
+												<div class="form-group col-12">
+													<label for="overtime-duty">Location</label>
+													<select name="overtime_duty" id="overtime-duty" class="form-control" required>
+														<option selected disabled hidden>Choose Duty...</option>
+														<option value="KPB">Ketua PB</option>
+														<option value="KO">Ketua Operasi</option>
+														<option value="PA">Pejabat Am</option>
+														<option disabled>───────────────</option>
+														<option value="KS">Ketua Syif</option>
+														<option value="MCC">Main Control Center</option>
+														<option disabled>───────────────</option>
+														<option value="TA" >Tugas Am</option>
+														<option value="MPV">MPV</option>
+														<option disabled>───────────────</option>
+														<option value="KT">Ketua Trafik</option>
+														<option value="T">Trafik</option>
+														<option disabled>───────────────</option>
+														<option value="KSIA">Ketua Siasatan</option>
+														<option value="SIA">Siasatan</option>
+													</select>
+												</div>
 												<div class="form-group col-12">
 													<label for="overtime-location">Location</label>
-													<select name="overtime-location" id="overtime-location" class="form-control" required>
+													<select name="overtime_location" id="overtime-location" class="form-control" required>
 														<option selected disabled hidden>Choose Location...</option>
 														<option value="POS1">Pos 1 - Gate A</option>
 														<option value="POS2">Pos 2 - Gate B</option>
@@ -274,12 +312,11 @@
 													</select>
 												</div>
 											</div>
-											<input class="form-daily-id" name="daily-id" type="text" value="N/A" hidden>
 											<button type="submit" class="btn btn-block btn-primary">Save Assignment</button>
 										</form>
 									</div>
 									<div class="tab-pane fade" id="leave-form" role="tabpanel">
-										<form action="" method="POST">
+										<form id="add-leave-form" action="" method="POST">
 											<div class="form-row">
 												<div class="form-group col-12">
 													<label for="leave-type">Type</label>
@@ -298,16 +335,15 @@
 												</div>
 											</div>
 											<!-- Validate this input in controllers -->
-											<input class="form-daily-id" name="daily-id" type="text" value="N/A" hidden>
 											<button type="submit" class="btn btn-block btn-primary">Save Leave</button>
 										</form>
 									</div>
 									<div class="tab-pane fade" id="substitute-form" role="tabpanel">
-										<form method="POST" action="">
+										<form id="add-substitute-form" action="" method="POST">
 											<div class="form-row">
 												<div class="form-group col-12">
-													<label for="substitute-daily">Member</label>
-													<select id="substitute-daily" name="substitute-daily" class="form-control">
+													<label for="substitute-daily-id">Member</label>
+													<select id="substitute-daily-id" name="substitute-daily-id" class="form-control">
 														<option selected disabled hidden>Choose Member...</option>
 														<!-- Initialized on page init -->
 														<option value="23158">23158 Halimah</option>
@@ -315,11 +351,10 @@
 													</select>
 												</div>
 												<div class="form-group col-12">
-													<label for="reDesc">Description</label>
-													<textarea id="reDesc" class="form-control" rows="3" placeholder="Leave blank if no description..."></textarea>
+													<label for="substitute-description">Description</label>
+													<textarea name="substitute-description" id="substitute-description" class="form-control" rows="3" placeholder="Leave blank if no description..."></textarea>
 												</div>
 											</div>
-											<input class="form-daily-id" name="daily-id" type="text" value="N/A" hidden>
 											<button type="submit" class="btn btn-block btn-primary">Save Rescheduling</button>
 										</form>
 									</div>
@@ -328,6 +363,44 @@
 						</div>
 					</div>
 				</div>
+				<!-- Change Location Modal -->
+				<div class="modal fade" id="editLocationModal" tabindex="-1" role="dialog" aria-labelledby="editLocationModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+
+							<form id="edit-location-form" action="" method="POST">
+								<div class="modal-header">
+									<h5 class="modal-title" id="editLocationModalLabel">Change Location</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="form-group">
+										<label for="overtime-location">Location</label>
+										<select name="overtime_location" id="overtime-location" class="form-control" required>
+											<option selected disabled hidden>Choose Location...</option>
+											<option value="POS1">Pos 1 - Gate A</option>
+											<option value="POS2">Pos 2 - Gate B</option>
+											<option value="POS3">Pos 3 - Akademik</option>
+											<option value="POS4">Pos 4 - Hotel</option>
+											<option value="POS5">Pos 5 - PHN/DYG/KARAH</option>
+											<option value="POS6">Pos 6 - RD/TGL/GM</option>
+											<option value="POS7">Pos 7 - Office</option>
+										</select>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<div class="d-flex">
+										<button type="button" class="btn btn-default btn-outline-secondary ml-auto mr-2" data-dismiss="modal">Cancel</button>
+											<button type="submit" class="btn btn-default btn-primary">Save Change</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
 				<!-- Delete Modal -->
 				<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
 					<div class="modal-dialog" role="document">
@@ -344,8 +417,7 @@
 							<div class="modal-footer">
 								<div class="d-flex">
 									<button type="button" class="btn btn-default btn-outline-secondary ml-auto mr-2" data-dismiss="modal">Cancel</button>
-									<form action="" method="POST">
-										<input class="form-daily-id" name="form-daily-id" type="text" value="N/A" hidden>
+									<form id="delete-remark-form" action="" method="POST">
 										<button type="submit" class="btn btn-default btn-outline-danger">Yes, delete it!</button>
 									</form>
 								</div>
@@ -361,22 +433,28 @@
 		<script src="./vendors/jquery-3.4.1/jquery-3.4.1.slim.js"></script>
 		<script src="./vendors/bootstrap-4.4.1-dist/js/bootstrap.bundle.js"></script>
 		<script>
-			$('.daily--remark-add-btn, .daily--remark-remove-btn').click('on', function() {
+			let routesDailyAddRemarksArray = [];
+			$('.daily--remark-add-btn, .daily--remark-remove-btn, .daily--edit-location-btn').click('on', function() {
 				let rowId = Number( this.id.replace('daily--edit-btn-', '') );
 				let dailyId = selectRow('.daily--id', rowId).text();
+				let remarkId = selectRow('.daily--remark-id', rowId).text();
+
 				let memberPrefix = selectRow('.daily--member-prefix', rowId).text();
 				let memberId = selectRow('.daily--member-id', rowId).text();
 				let memberName = selectRow('.daily--member-name', rowId).text();
 
+				// Set common attributes
 				$('span.form-daily-id').text(dailyId);
 				$('span.form-member-prefix').text(memberPrefix);
 				$('span.form-member-id').text(memberId);
 				$('span.form-member-name').text(memberName);
 
-				// Input value attribute for forms
-				$('input.form-daily-id').attr('value', dailyId);
+				// Form add remark action set; off, overtime, substitute
+        $('#add-leave-form').attr('action', routesDailyAddRemarksArray[dailyId]["off"]);
+        $('#add-overtime-form').attr('action', routesDailyAddRemarksArray[dailyId]["overtime"]);
+        $('#add-substitute-form').attr('action', routesDailyAddRemarksArray[dailyId]["substitute"]);
 
-				// console.info(`${prefix}\n${id}\n${name}`);
+        $('#edit-location-form').attr('action', routesDailyAddRemarksArray[dailyId]["editLocation"]);
 
 				// If member id matches, d-none it
 				$('#substitute-daily option').each(function (i) {
@@ -389,6 +467,27 @@
 						}
 					}
 				});
+
+				// Remark removal
+				if($(this).hasClass('daily--remark-remove-btn')) {
+					$(this).attr('data-remark-type', function(i, attr) {
+						let routeDeleteOffPrefix = 'offRoutePrefix';
+						let routeDeleteOvertimePrefix = 'overtimeRoutePrefix';
+						let routeDeleteSubstitutePrefix = 'substituteRoutePrefix';
+
+						let route;
+						if(attr.toLowerCase() === 'off') {
+							route = routeDeleteOffPrefix+'/'+remarkId;
+						}
+						if(attr.toLowerCase() === 'overtime') {
+							route = routeDeleteOvertimePrefix+'/'+remarkId;
+						}
+						if(attr.toLowerCase() === 'substitute') {
+							route = routeDeleteSubstitutePrefix+'/'+remarkId;
+						}
+						$('#delete-remark-form').attr('action', route);
+					});
+				}
 			});
 
 			// Functions:
